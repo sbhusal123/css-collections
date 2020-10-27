@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    background: #272727;
+}
+
+ul li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown {
+    position: absolute;
+    width: 100%;
+    flex-wrap: wrap;
+    visibility: hidden;
+    transition: 0.3s;
+    left: 0;
+    top: -600%;
+    z-index: -1;
+}
+
+ul li:hover .dropdown {
+    visibility: visible;
+    top: 100%;
+}
+
+.dropdown2 {
+    position: absolute;
+    left: 150%;
+    width: 100%;
+    top: 0;
+    flex-wrap: wrap;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+.dropdown li:hover .dropdown2 {
+    left: 100%;
+    visibility: visible;
+}
+
+ul li a:hover {
+    color: #ccc;
+}
+
+/* Underline Animation  */
+
+/* 
+   After is used to insert content after or before DOM.
+*/
+a:after {
+    top: 80%; /* Underline at 80% from top */
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%; /* Underline animation starts from 50% hotizontally*/
+    position: relative;
+    background: #fff;
+    transition: width 0.3s, left 0.3s, color;
+    /* Transition of 0.3s to increase width*/
+    width: 0%;
+}
+
+a:hover:after {
+    width: 100%;
+    left: 0;
+}
+/* End of Underline Animation */
+
+.menu-header {
+    display: none;
+}
+
+.down {
+    display: none;
+}
+@media (max-width: 767px) {
+    ul {
+        display: table;
+        width: 100%;
+    }
+    ul li {
+        text-align: left;
+    }
+
+    .dropdown,
+    .dropdown2 {
+        position: relative;
+        left: 0;
+        top: 0;
+        transition: none;
+        visibility: visible;
+        display: none;
+        z-index: 1;
+        background: #4f4741;
+        padding-left: 5%;
+    }
+
+    .dropdown2 {
+        background: #62625e;
+    }
+    .display {
+        display: block;
+    }
+
+    .dropdown li:hover .dropdown2 {
+        left: 0;
+        visibility: visible;
+    }
+    .menu-content {
+        display: none;
+    }
+
+    .menu-header {
+        background: #272727;
+        text-align: right;
+        padding: 10px;
+        display: block;
+    }
+    .fa-bars {
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+
+    /* Dispay down arrow on mobile view */
+    .down {
+        display: inline-block;
+    }
+
+    .right {
+        display: none;
+    }
+}

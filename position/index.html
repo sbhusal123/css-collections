@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+
+        <!-- Static position -->
+        <div class="parent__no-position">
+            <p style="text-align: right">Parent with static(default) position.</p>
+            <div class="child-one">
+                <p>First Child with absolute position.
+                    position (top=0, left=0)</p>
+                <small>Positions relative to viewport.</small>
+            </div>
+            <div class="child-two">
+                <p>Second Child with relative position.(From left=20px)</p>
+                <small>Aligned relative to it's position in normal document
+                    flow.</small>
+            </div>
+            <div class="child-three">Third Child with static(normal) flow.</div>
+        </div>
+
+        <!-- Relative Position -->
+        <div class="parent__relative-position">
+            <p style="text-align: right; margin-right:10%">Parent with relative
+                position.(top=20px, left=30px)</p>
+            <div class="child-one">
+                <p>First Child with absolute position.
+                    position (top=0, left=0)<small> Positions relative to
+                        parent container.</small></p>
+            </div>
+            <div class="child-two">
+                <p>Second Child with relative position.(From left=20px)</p>
+                <small>Aligned relative to it's position in normal document
+                    flow.</small>
+            </div>
+            <div class="child-three">Third Child with static(normal) flow.</div>
+        </div>
+
+
+        <!-- Absolute Position -->
+        <p style="margin-top:60px; margin-left: 500px">Parent With absolute
+            position. Positioning (top=500px, left=300px)</p>
+        <div class="parent__absolute-position">
+            <p style="text-align: center; font-size: 20px; color: white">Parent
+                with absolute
+                position.(top=20px, left=30px)</p>
+            <div class="child-one" style="opacity: 0.73">
+                <p>First Child absolute position.
+                    (top=0, left=0)<small> Positions
+                        relative to
+                        parent container. (Overlaps any content in that
+                        position)</small></p>
+            </div>
+            <div class="child-two">
+                <p>Second Child with relative
+                    position.(From left=20px)</p>
+                <small>Aligned relative to it's position in normal document
+                    flow.</small>
+            </div>
+            <div class="child-three">Third Child with static(normal) flow.</div>
+        </div>
+    </body>
+</html>

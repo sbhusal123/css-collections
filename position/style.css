@@ -1,0 +1,45 @@
+* {
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+}
+
+small {
+    font-size: 16px;
+}
+
+.parent__no-position {
+    background-color: #1ea1e8;
+}
+
+.parent__relative-position {
+    position: relative;
+    background-color: #1ea1e8;
+    top: 20px;
+    left: 30px;
+}
+
+.parent__absolute-position {
+    position: absolute;
+    background-color: #1ea1e8;
+    top: 500px;
+    left: 300px;
+    width: 70%;
+}
+
+.child-one {
+    background-color: violet;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.child-two {
+    background-color: red;
+    position: relative;
+    left: 20px;
+}
+
+.child-three {
+    background-color: pink;
+}
