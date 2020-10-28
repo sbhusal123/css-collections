@@ -1,90 +1,51 @@
-body {
-    margin: 0;
-    background: linear-gradient(to left, #ef629f, #eecda3);
+* {
+    margin: 0%;
+    padding: 0%;
 }
 
 .container {
     display: flex;
+    flex-flow: column wrap;
+    align-content: stretch;
+}
+
+nav {
+    padding: 2% 0%;
+    flex: 1;
+    background-color: #df3df4;
+}
+
+nav > p {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.main__content {
+    display: inline-flex;
     flex-flow: row;
-    flex-wrap: wrap;
-    position: relative;
     align-items: stretch;
-}
-
-.nav__content,
-.dropdown {
-    background: #ef629f; /* fallback for old browsers */
-    border: 2px solid #eecda3;
-    border-radius: 8px;
-    width: 100%;
-    margin: 1% 1%;
-}
-
-ul {
-    width: 99%;
-    display: flex;
-    flex-wrap: row;
-}
-
-ul > li {
-    list-style: none;
-    display: inline-block;
-    width: 12%;
-    margin: 0;
-    flex-wrap: row;
-}
-
-li > a {
-    text-decoration: none;
-    font-size: 20px;
-    display: block;
-    color: black;
-    text-align: center;
-}
-
-a:after {
     position: relative;
-    display: block;
-    content: "";
-    left: 50%;
-    top: 80%;
-    height: 2px;
-    width: 0%;
-    background: #eecda3;
-    transition: width 0.3s, left 0.3s;
 }
 
-a:hover:after {
-    width: 100%;
-    left: 0%;
+section {
+    flex: 1;
+    padding: 1%;
+    margin: 1%;
+    background: #75eab9;
 }
 
-.dropdown {
-    width: fit-content;
+section > section {
+    position: relative;
+    top: 0%;
+    display: flex;
+}
+
+section > button {
+    padding: 1%;
+    margin: 3px;
+    flex: 1 1 auto;
     text-align: center;
-    padding: 0.5% 4%;
-}
-
-ul.dropdown {
-    display: block;
-    position: absolute;
-    top: 70%;
-    left: 25%;
-}
-
-ul.dropdown > li {
-    display: inline;
-}
-
-@media (max-width: 720px) {
-    body {
-        margin: 0;
-    }
-    ul {
-        display: block;
-    }
-    ul > li {
-        display: block;
-        width: 80%;
-    }
+    flex-wrap: nowrap;
 }
